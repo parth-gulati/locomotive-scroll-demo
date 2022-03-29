@@ -1,19 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <title>Locomotive scrolling</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
 
     <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    
+</head>
+
+<body>
+    <div class="container" data-scroll-container>
+        <!-- Top section -->
+        <div class="section py" data-scroll-section>
+            <h2 data-scroll data-scroll-speed="4" data-scroll-position="top">LET'S SCROLL</h2>
+            <p data-scroll data-scroll-speed="-4" data-scroll-direction="horizontal">Neeche jaa</p>
+        </div>
+
+        <!-- Gallery -->
+        <div id="gallery" data-scroll-section>
+            <div class="grid">
+                <div class="img">
+                    <img src="./img/4.jpg" alt="" />
+                    <img src="./img/8.jpg" alt="" />
+                    <img src="./img/03.jpg" alt="" />
+                    <img src="./img/7.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="./img/1.jpg" alt="" data-scroll data-scroll-sticky data-scroll-target="#gallery"
+                        data-scroll-speed="1.2" />
+                </div>
+            </div>
+        </div>
+
+        <!-- ThreeD -->
+
+        <div id="threeD" class="threeD" data-scroll-section>
+            <h2>
+                <span data-scroll data-scroll-repeat data-scroll-speed="5">C</span>
+                <span data-scroll data-scroll-repeat data-scroll-speed="3">H</span>
+                <span data-scroll data-scroll-repeat data-scroll-speed="2">U</span>
+                <span data-scroll data-scroll-repeat data-scroll-speed="4">T</span>
+                <span data-scroll data-scroll-repeat data-scroll-speed="6">I</span>
+                <span data-scroll data-scroll-repeat data-scroll-speed="7">Y</span>
+                <span data-scroll data-scroll-repeat data-scroll-speed="3">E</span>
+            </h2>
+
+            <!-- SkewDiv -->
+            <div class="skewsec">
+                <span data-scroll data-scroll-direction="horizontal" data-scroll-speed="20"
+                    data-scroll-target="#threeD">Bheek maang raha</span>
+            </div>
+            <div class="skewsec2">
+                <span data-scroll data-scroll-direction="horizontal" data-scroll-speed="-20"
+                    data-scroll-target="#threeD">Mujhe bheek do</span>
+            </div>
+        </div>
+
+        <div class="subs" data-scroll-section data-scroll-repeat>
+            <h2 data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="5">D</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="5">A</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="5">L</span>
+                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="5">L</span>
+                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="5">A</span>
+                <span data-scroll data-scroll-delay="0.055" data-scroll-speed="5">P</span>
+                <span data-scroll data-scroll-delay="0.045" data-scroll-speed="5">A</span>
+                <span data-scroll data-scroll-delay="0.035" data-scroll-speed="5">N</span>
+            </h2>
+        </div>
+
+        <div class="footer" data-scroll-section>
+            <h1 data-scroll data-scroll-speed="4" data-scroll-position="bottom">Lol bc</h1>
+        </div>
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="./script.js"></script>
-  </body>
+</body>
+
 </html>
